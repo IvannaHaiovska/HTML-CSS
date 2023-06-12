@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.menu {
+    display: flex;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin: 0px 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 30px 20px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.homeBackground {
+    background-image: url(../images/home-background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+}
+
+.introduceTitle {
+    color: white;
+    padding: 10%;
+    width: 55%;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.getStartBth {
+    margin: 40px 0;
+    border: none;
+    border-radius: 0.5em;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 2em;
+    background-color: hsl(43, 89%, 38%)
+}
+
+.acticle {
+    display: flex;
+    margin: 10% 14% 5%;
+}
+
+.photo1 {
+    height: 500px;
+}
+
+.article_info {
+    margin: 50px;
+    width: 35%;
+}
+
+h2 {
+    font-size: 2.3em;
+    margin-bottom: 36px;
+    line-height: 1.4em;
+}
+
+p {
+    line-height: 30px;
+}
+
+.learnMoreBtn {
+    margin: 40px 0;
+    border: none;
+    border-radius: 0.5em;
+    padding: 15px;
+    color: white;
+    background-color: rgb(184, 134, 11)
+}
+
+.yoga_info {
+    display: flex;
+    padding: 5% 14%;
+}
+
+.backgroundBlock {
+    background-color: #938a5c;
+    padding: 0;
+    height: 650px;
+}
+
+.photoBlock {
+    height: 400px;
+    width: 350px;
+}
+
+h3 {
+    margin: 20px 0;
+    font-weight: normal;
+    font-size: 1.3em;
+    letter-spacing: 0.3em;
+    line-height: 1.6em;
+}
+
+.block1_info {
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.block1 p,
+.block3 p {
+    line-height: 1.9em;
+    display: block;
+}
+
+.block2 {
+    margin: 30% 5% 0;
+}
+
+.block3 h3,
+.block3 p {
+    color: white;
+    display: block;
+}
+
+.block3 {
+    margin-top: 100px;
+}
+
+.btnMoreInfo {
+    background-color: inherit;
+    color: black;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.block3 .btnMoreInfo {
+    color: white;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 70px;
+}
+
+.usefullYoga {
+    margin: 30% 14% 0;
+    display: flex;
+}
+
+.usefullBlockImg1 {
+    width: 300px;
+    min-height: 250px;
+}
+
+.usefullBlockImg2 {
+    margin-top: 20px;
+    width: 300px;
+    min-height: 250px;
+}
+
+.usefullBlockImg3 {
+    width: 400px;
+    height: 420px;
+    margin: 20px;
+}
+
+.df {
+    display: flex;
+    flex-direction: column;
+}
+
+.textBlock {
+    margin-top: 90px;
+}
+
+.textBlock h2 {
+    font-size: 3em;
+}
+
+.textBlock p {
+    font-style: italic;
+}
+
+.offers {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    min-width: 200px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 0.5em;
+    background-color: #b0ae97ba;
+    border-style: inset;
+}
+
+.fa-regular {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.card p {
+    width: 370px;
+}
+
+.offers .card:nth-child(2n+1) {
+    background-color: #aaa54aba;
+}
+
+.contact {
+    margin-top: 60px;
+    display: flex;
+}
+
+.contact .backgroundBlock {
+    width: 600px;
+    height: 780px;
+}
+
+.contactPhoto {
+    width: 460px;
+    height: 680px;
+    margin: 49px 0 0 192px;
+}
+
+.contactFormBlock {
+    margin: 60px 100px 0;
+    line-height: 3em;
+    color: #1a1a1a;
+}
+
+.contactFormBlock h4 {
+    width: 400px;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.nameField,
+.emailField,
+.messageField {
+    width: 80%;
+    border: none;
+    outline: none;
+    height: 50px;
+    background-color: #e9e9e9c9;
+    padding-left: 10px;
+    font-size: 1em;
+    color: gray;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+
+.messageField {
+    height: 100px;
+    padding-top: 10px;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.submitBtn {
+    width: 80%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #726b46;
+    color: white;
+    font-size: 1.2em;
+}
+
+hr {
+    margin: 100px 0 10px;
+    color: #c2bc4dca;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    line-height: 30px;
+}
+
+.footerLogo {
+    width: 50px;
+    height: 50px;
+}
+
+.footerMenu {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footerMenu li,
+span {
+    font-size: 15px;
+    margin: 0;
+}
+
+.socialNetworkPicture {
+    width: 30px;
+    height: 30px;
+}
+
+.address {
+    width: 216px;
+}
+
+.socialNetworksBlock {
+    margin: 10px 0 0 20px;
+}
+
+.articleName {
+    text-align: center;
+    margin: 70px 0 30px 90px;
+    color: #3a321a;
+}
+
+.program {
+    width: 20%;
+    margin: 40px 20px 20px 100px;
+}
+
+.yoga_photo {
+    width: 300px;
+    height: 200px;
+}
+
+.program_info {
+    text-align: center;
+    display: inline;
+}
+
+.program_info p {
+    font-size: 0.8rem;
+    color: rgb(48, 48, 48);
+}
+
+.coursesBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offerBlock {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.offerBlockPhoto {
+    width: 400px;
+    height: 500px;
+    border-radius: 0.5em;
+}
+
+.offerList {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.teamBlock {
+    background-color: #938a5c;
+    padding: 10px 0;
+    color: rgb(233, 233, 233);
+}
+
+.teamMember {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trainer {
+    margin: 0 30px;
+}
+
+.teamPhoto {
+    width: 500px;
+    height: 600px;
+}
+
+.teamInfo {
+    font-size: 1.5em;
+    width: 40%;
+}
+
+.teamMemberPhoto {
+    width: 300px;
+    height: 300px;
+}
+
+.btnContact {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: #cfb655b3;
+    border-radius: 1em;
+}
+
+.teamMemberInfo {
+    display: flex;
+    margin: 36px;
+    justify-content: space-between;
+}
+
+h5 {
+    margin-top: 10px;
+}
