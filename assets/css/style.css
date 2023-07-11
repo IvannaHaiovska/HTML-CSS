@@ -11,8 +11,39 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr 70px 200px 0.3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header header"
+        ". main main . sidebar ."
+        "footer footer footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.menu .fa-bars {
+    display: none;
+}
+
 .menu {
     display: flex;
+
 }
 
 .logo {
@@ -28,7 +59,7 @@ ul {
 
 li {
     margin: 30px 20px;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 a {
@@ -38,10 +69,10 @@ a {
 
 .homeBackground {
     background-image: url(../images/home-background.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 600px;
+    height: auto;
 }
 
 .introduceTitle {
@@ -67,16 +98,17 @@ h1 {
 
 .acticle {
     display: flex;
-    margin: 10% 14% 5%;
+    margin: 10% 0;
 }
 
 .photo1 {
-    height: 500px;
+    width: 40%;
+    height: max-content;
+    margin-top: 1em;
 }
 
 .article_info {
-    margin: 50px;
-    width: 35%;
+    margin: 0 5%;
 }
 
 h2 {
@@ -90,7 +122,7 @@ p {
 }
 
 .learnMoreBtn {
-    margin: 40px 0;
+    margin-top: 40px;
     border: none;
     border-radius: 0.5em;
     padding: 15px;
@@ -100,24 +132,25 @@ p {
 
 .yoga_info {
     display: flex;
+    gap: 10px 20px;
     padding: 5% 14%;
 }
 
 .backgroundBlock {
     background-color: #938a5c;
-    padding: 0;
-    height: 650px;
+    height: max-content;
+    margin-left: -15%;
 }
 
 .photoBlock {
-    height: 400px;
-    width: 350px;
+    height: 276px;
+    width: 244px;
 }
 
 h3 {
     margin: 20px 0;
     font-weight: normal;
-    font-size: 1.3em;
+    font-size: 1em;
     letter-spacing: 0.3em;
     line-height: 1.6em;
 }
@@ -131,12 +164,13 @@ h3 {
 
 .block1 p,
 .block3 p {
-    line-height: 1.9em;
+    line-height: 1.5em;
     display: block;
+    font-size: 0.9em;
 }
 
 .block2 {
-    margin: 30% 5% 0;
+    margin: 31% 5% 0;
 }
 
 .block3 h3,
@@ -146,7 +180,7 @@ h3 {
 }
 
 .block3 {
-    margin-top: 100px;
+    margin-top: 18px;
 }
 
 .btnMoreInfo {
@@ -167,25 +201,25 @@ h3 {
 }
 
 .usefullYoga {
-    margin: 30% 14% 0;
+    margin-top: 15%;
     display: flex;
 }
 
 .usefullBlockImg1 {
-    width: 300px;
-    min-height: 250px;
+    width: 278px;
+    min-height: 237px;
 }
 
 .usefullBlockImg2 {
     margin-top: 20px;
-    width: 300px;
-    min-height: 250px;
+    width: 278px;
+    min-height: 237px;
 }
 
 .usefullBlockImg3 {
-    width: 400px;
-    height: 420px;
-    margin: 20px;
+    width: 348px;
+    height: 386px;
+    margin: 30px 20px;
 }
 
 .df {
@@ -234,7 +268,9 @@ h4 {
     width: 370px;
 }
 
-.offers .card:nth-child(2n+1) {
+.offers .card:nth-child(1),
+.offers .card:nth-child(4),
+.offers .card:nth-child(5) {
     background-color: #aaa54aba;
 }
 
@@ -244,18 +280,18 @@ h4 {
 }
 
 .contact .backgroundBlock {
-    width: 600px;
-    height: 780px;
+    width: 650px;
+    padding-bottom: 4%;
 }
 
 .contactPhoto {
-    width: 460px;
+    width: 440px;
     height: 680px;
-    margin: 49px 0 0 192px;
+    margin: 10% 0 0 25%;
 }
 
 .contactFormBlock {
-    margin: 60px 100px 0;
+    margin: 60px 0 0 140px;
     line-height: 3em;
     color: #1a1a1a;
 }
@@ -305,6 +341,33 @@ hr {
     color: #c2bc4dca;
 }
 
+aside {
+    margin-top: 100px;
+}
+
+aside p {
+    font-size: 0.8em;
+    color: rgb(70, 70, 70);
+    line-height: 1.7em;
+    margin: 20px 0;
+}
+
+aside h3 {
+    font-size: 1em;
+    color: rgb(72, 72, 72);
+    margin: 50px 0 15px;
+}
+
+.newsletterImg {
+    width: 90%;
+}
+
+aside a {
+    text-decoration: underline;
+    font-weight: 600;
+    color: rgb(70, 70, 70);
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -343,18 +406,19 @@ span {
 
 .articleName {
     text-align: center;
-    margin: 70px 0 30px 90px;
+    margin: 40px 0 60px;
     color: #3a321a;
 }
 
 .program {
-    width: 20%;
-    margin: 40px 20px 20px 100px;
+    width: 300px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .yoga_photo {
-    width: 300px;
-    height: 200px;
+    max-width: 300px;
+    max-height: 200px;
 }
 
 .program_info {
@@ -371,13 +435,15 @@ span {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 0 100px;
 }
 
 .offerBlock {
     display: flex;
     margin-top: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .offerBlockPhoto {
@@ -429,6 +495,7 @@ span {
     padding: 10px;
     background-color: #cfb655b3;
     border-radius: 1em;
+    margin-left: 5px;
 }
 
 .teamMemberInfo {
@@ -439,4 +506,689 @@ span {
 
 h5 {
     margin-top: 10px;
+}
+
+
+@media only screen and (min-device-width: 400px) and (max-device-width: 800px) {
+    .menu {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        grid-template-columns: 0.2fr 1fr 1fr 30px 100px 0.2fr;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    li {
+        margin: 20px 6px 0;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin: 15px 0;
+    }
+
+    .introduceTitle {
+        padding: 5%;
+        min-width: 80%;
+    }
+
+    p {
+        font-size: 0.8em;
+        line-height: 20px;
+    }
+
+    .getStartBth {
+        margin-top: 15px;
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .learnMoreBtn {
+        margin-top: 20px;
+        padding: 8px;
+    }
+
+    .backgroundBlock {
+        margin-left: -10%;
+    }
+
+    .yoga_info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 20px;
+        padding: 4%;
+    }
+
+    .photoBlock {
+        height: 256px;
+        width: 224px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    h3 {
+        font-size: .9em;
+        line-height: 1.3em;
+        margin-top: 5px;
+    }
+
+    .block1_info {
+        background-color: inherit;
+        color: white;
+    }
+
+    .block1 p,
+    .block3 p {
+        line-height: 1.2em;
+        font-size: 0.8em;
+    }
+
+    .block2 {
+        margin: 0;
+    }
+
+    .btnMoreInfo {
+        color: white;
+        font-size: .9em;
+        border-bottom: 1px solid #fff;
+    }
+
+    .block3 .btnMoreInfo {
+        margin-bottom: 10px;
+    }
+
+    .usefullYoga {
+        flex-wrap: wrap;
+    }
+
+    .usefullBlockImg1 {
+        width: 198px;
+        min-height: 157px;
+    }
+
+    .usefullBlockImg2 {
+        margin-top: 10px;
+        width: 198px;
+        min-height: 157px;
+    }
+
+    .usefullBlockImg3 {
+        width: 248px;
+        height: 276px;
+        margin: 30px 10px;
+    }
+
+    .textBlock {
+        margin-top: 15px;
+    }
+
+    .textBlock h2 {
+        font-size: 1.3em;
+    }
+
+    .offers {
+        margin-top: 20px;
+    }
+
+    .card {
+        margin: 5px 5px;
+        padding: 5px;
+    }
+
+    .fa-regular {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+
+    .card p {
+        width: 210px;
+    }
+
+    .offers .card:nth-child(2n+1) {
+        background-color: #aaa54aba;
+    }
+
+    .offers .card:nth-child(4) {
+        background-color: #b0ae97ba;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+    }
+
+    .contactPhoto {
+        margin-left: 20px;
+        max-height: 500px;
+        display: block;
+        width: 250px;
+    }
+
+    .contact .backgroundBlock {
+        width: 40%;
+    }
+
+    .contactFormBlock {
+        margin: 20px 0 0 86px;
+        width: 50%;
+    }
+
+    .contactFormBlock h4 {
+        width: 90%;
+        font-size: 1.3rem;
+        line-height: 25px;
+    }
+
+    .nameField,
+    .emailField,
+    .messageField {
+        font-size: .8em;
+        margin-bottom: 10px;
+        padding-left: 5px;
+        min-width: 90%;
+    }
+
+    .submitBtn {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    aside p {
+        font-size: .7em;
+        margin: 10px 0;
+        line-height: 1.5em;
+    }
+
+    aside h3 {
+        margin: 20px 0 5px;
+        font-size: .9em;
+    }
+
+    aside img {
+        width: 90%;
+    }
+
+    .followImg img {
+        width: 15%;
+    }
+
+    .footer {
+        line-height: 20px;
+    }
+
+    .footerMenu li,
+    span {
+        font-size: 10px;
+    }
+
+    .socialNetworkPicture {
+        width: 20px;
+        height: 20px;
+    }
+
+    .address {
+        width: 30%;
+    }
+
+    .socialNetworksBlock {
+        margin: 5px 0 0 0;
+    }
+
+    .articleName {
+        margin: 10px 0 5px;
+    }
+
+    .program {
+        margin: 20px auto;
+        width: 300px;
+    }
+
+    .yoga_photo {
+        max-width: 200px;
+        max-height: 150px;
+    }
+
+    .coursesBlock {
+        margin: 0 50px;
+    }
+
+    .offerBlockPhoto {
+        width: 300px;
+        height: 400px;
+    }
+
+    .offerList {
+        margin-left: 20px;
+    }
+
+    .teamPhoto {
+        width: 250px;
+        height: 300px;
+    }
+
+    .teamBlock {
+        margin-bottom: 30px;
+    }
+
+    .teamInfo {
+        font-size: 1.2em;
+        width: 50%;
+    }
+
+    .teamMemberPhoto {
+        width: 200px;
+        height: 200px;
+    }
+
+    .teamMember {
+        margin-top: 20px;
+    }
+
+    .teamMemberInfo {
+        margin: 10px 0;
+    }
+
+    hr {
+        margin: 60px 0 10px;
+    }
+}
+
+@media only screen and (max-device-width: 400px) {
+    .menu {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        grid-template-columns: 0.1fr 1fr 1fr 10px 70px 0.1fr;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-list {
+        font-size: 15px;
+        line-height: 10px;
+        text-decoration-line: underline;
+        list-style: none;
+        display: none;
+        transition: all 2s ease-in-out;
+        margin: 25px 0;
+    }
+
+    .navBar {
+        transition-duration: 2s;
+    }
+
+    .navBar .fa-bars {
+        display: block;
+        font-size: 1.3em;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
+
+    .navBar:hover .menu-list {
+        display: block;
+    }
+
+    li {
+        margin: 20px 6px 0;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    .introduceTitle {
+        padding: 5%;
+        min-width: 90%;
+    }
+
+    p {
+        font-size: 0.7em;
+        line-height: 18px;
+    }
+
+    .getStartBth {
+        margin-top: 15px;
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    .photo1 {
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: 15px 0 10px 8px;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    .learnMoreBtn {
+        margin-top: 15px;
+        padding: 5px;
+    }
+
+    .backgroundBlock {
+        margin-left: -10%;
+    }
+
+    .yoga_info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px 15px;
+        padding: 2%;
+    }
+
+    .photoBlock {
+        height: auto;
+        width: 70%;
+        display: block;
+        margin: 20px auto 0;
+    }
+
+    h3 {
+        font-size: .8em;
+        line-height: 1em;
+        margin-top: 5px;
+    }
+
+    .block1_info {
+        background-color: inherit;
+        color: white;
+    }
+
+    .block1 p,
+    .block3 p {
+        line-height: 1.2em;
+        font-size: 0.8em;
+    }
+
+    .block2 {
+        margin: 0;
+    }
+
+    .btnMoreInfo {
+        color: white;
+        font-size: .9em;
+        border-bottom: 1px solid #fff;
+    }
+
+    .block3 .btnMoreInfo {
+        margin-bottom: 10px;
+    }
+
+    .block3 {
+        padding: 0 0 20px 15px;
+    }
+
+    .usefullYoga {
+        flex-wrap: wrap;
+    }
+
+    .usefullBlockImg1 {
+        width: 100%;
+        min-height: auto;
+        margin-top: 30px;
+    }
+
+    .usefullBlockImg2 {
+        margin-top: 10px;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .usefullBlockImg3 {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .textBlock {
+        margin-top: 15px;
+    }
+
+    .textBlock h2 {
+        font-size: 1.3em;
+    }
+
+    .offers {
+        margin-top: 20px;
+    }
+
+    .card {
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .fa-regular {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+
+    .card p {
+        width: 90%;
+    }
+
+    .offers .card:nth-child(2n+1) {
+        background-color: #aaa54aba;
+    }
+
+    .offers .card:nth-child(4) {
+        background-color: #b0ae97ba;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contactPhoto {
+        margin: 10% auto -60%;
+        max-width: 80%;
+        height: auto;
+        display: block;
+    }
+
+    .contact .backgroundBlock {
+        width: 110%;
+        margin-bottom: 0;
+        height: auto;
+    }
+
+    .contactFormBlock {
+        margin: 65% auto 0;
+        width: 100%;
+    }
+
+    .contactFormBlock h4 {
+        width: 90%;
+        font-size: 1rem;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+
+    .nameField,
+    .emailField,
+    .messageField {
+        font-size: .5em;
+        padding-left: 2px;
+        width: 100%;
+        height: 30px;
+        margin: 0;
+    }
+
+    .messageField {
+        margin: 10px 0 0;
+        height: 50px;
+    }
+
+    .submitBtn {
+        width: 100%;
+        font-size: 1em;
+        height: 30px;
+    }
+
+    aside {
+        margin-top: 50px;
+    }
+
+    aside .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    aside p {
+        font-size: .6em;
+        margin: 10px 0;
+        line-height: 1.1em;
+    }
+
+    aside h3 {
+        margin: 15px 0 5px;
+        font-size: .8em;
+        letter-spacing: normal;
+    }
+
+    aside img {
+        width: 70%;
+    }
+
+    .followImg img {
+        width: 10%;
+    }
+
+    .footer {
+        line-height: 18px;
+    }
+
+    .footerLogo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footerMenu {
+        display: none;
+    }
+
+    .socialNetworkPicture {
+        width: 15px;
+        height: 15px;
+    }
+
+    .address {
+        width: 30%;
+    }
+
+    .df span {
+        font-size: 0.6em;
+    }
+
+    .address {
+        width: 30%;
+    }
+
+    .address span {
+        font-size: .6em;
+    }
+
+    .socialNetworksBlock {
+        margin: 5px 0 0 0;
+    }
+
+    .articleName {
+        margin: 10px 0 5px;
+    }
+
+    .program {
+        margin: 20px auto;
+        width: 300px;
+    }
+
+    .yoga_photo {
+        max-width: 200px;
+        max-height: 150px;
+    }
+
+    .articleName {
+        margin: 30px auto 15px;
+        min-width: 20%;
+    }
+
+    .coursesBlock {
+        margin: 0 50px;
+    }
+
+    .offerBlockPhoto {
+        width: 300px;
+        height: 400px;
+    }
+
+    .offerList {
+        margin-left: 20px;
+    }
+
+    .teamPhoto {
+        width: 80%;
+        height: auto;
+        margin: 15px auto 0;
+    }
+
+    .teamBlock {
+        margin-bottom: 20px;
+    }
+
+    .teamInfo {
+        font-size: 1em;
+        width: 90%;
+        display: block;
+    }
+
+    .acticle {
+        flex-direction: column;
+    }
+
+    .teamMemberPhoto {
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .teamMember {
+        margin-top: 10px;
+    }
+
+    .teamMemberInfo {
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    hr {
+        margin: 30px 0 10px;
+    }
 }
